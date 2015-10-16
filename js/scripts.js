@@ -1,15 +1,16 @@
 $(document).ready(function(){
   var userInput = parseInt(prompt('Choose a number'));
+  var output;
   for (i=1; i<=userInput; i++) {
     if (i%3===0 && i%5===0) {
-      document.write('ping-pong');
+      output = 'ping-pong';
     } else if (i%5===0) {
-      document.write('pong');
+      output = 'pong';
     } else if (i%3===0) {
-      document.write('ping');
+      output = 'ping';
     } else {
-      document.write(i);
+      output = i;
     }
-    document.write('<br>');
+    $('#list').append("<li>"+output+"</li>");
   }
 }); //ending for document.ready
