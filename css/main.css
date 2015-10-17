@@ -1,0 +1,13 @@
+#index-h1 {
+  display: inline;
+  padding-right: 5%;
+}
+header img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+#start {
+  text-align: center;
+  margin: auto;
+}
