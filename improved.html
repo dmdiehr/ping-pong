@@ -22,12 +22,21 @@
     <div id="start">
       <h2>Choose Your Numbers</h2>
       <form>
-      <label>Ping <input class="input" id="ping-input" type="text" name="ping" value="3"/></label>
-      <label>Pong <input class="input" id="pong-input"type="text" name="pong" value="5"/></label>
-      <br>
-      <label>Length <input class="input" id="game-length" type="text" name="length" value="99"/></label>
+        <label>Ping <input class="input" id="ping-input" type="text" name="ping" value="3"/></label>
+        <label>Pong <input class="input" id="pong-input"type="text" name="pong" value="5"/></label>
+        <br>
+        <label>Length <input class="input" id="game-length" type="text" name="length" value="99"/></label>
       </form>
-        <button id="start-button">Play</button>
+      <button id="start-button">Start</button>
+    </div>
+    <div id="game-area">
+      <div id="left-score-div"><span id="left-score">00</span></div>
+      <div id="left-player-div"><img src="images/left-player.jpg"></div>
+      <div id="left-paddle-div"></div>
+      <div id="center-div"></div>
+      <div id="right-paddle-div"></div>
+      <div id="right-player-div"><img src="images/right-player.jpg"></div>
+      <div id="right-score-div"><span id="right-score">00</span></div>
     </div>
   
   </body>
