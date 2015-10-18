@@ -1,3 +1,7 @@
+body{
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
 #index-h1 {
   display: inline;
   padding-right: 5%;
@@ -10,4 +14,21 @@ header img {
 #start {
   text-align: center;
   margin: auto;
+  padding: 20px;
+}
+form {
+  text-align: center;
+}
+input {
+    display: inline-block;
+    width: 6em;
+    position: relative;
+    top: -3em;
+    text-align: center;
+}
+label {
+    display: inline-block;
+    width: 6em;
+    margin-right: .5em;
+    padding-top: 1.5em;
 }

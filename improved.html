@@ -7,7 +7,7 @@
 <!-- CSS and Fonts-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
 <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -21,10 +21,13 @@
 <!-- ********************************Starting Section***************************************** -->
     <div id="start">
       <h2>Choose Your Numbers</h2>
-      <input class="input" id="ping-input" type="text" name="ping" value="3">Ping</input>
-      <input class="input" id="pong-input"type="text" name="pong" value="5">Pong</input>
-      <input class="input" id="game-length" type="text" name="length" value="99">Play Until</input>
-      <button id="start-button">Play</button>
+      <form>
+      <label>Ping <input class="input" id="ping-input" type="text" name="ping" value="3"/></label>
+      <label>Pong <input class="input" id="pong-input"type="text" name="pong" value="5"/></label>
+      <br>
+      <label>Length <input class="input" id="game-length" type="text" name="length" value="99"/></label>
+      </form>
+        <button id="start-button">Play</button>
     </div>
   
   </body>
