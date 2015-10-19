@@ -6,6 +6,34 @@ var leftScore = 0;
 var rightScore = 0;
 var leftPaddle;
 var rightPaddle;
+var leftLag = 0;
+var centerLag = 0;
+var rightLag = 0;
+
+//functions to control div animation
+
+//center div
+function countDown(callback){
+  $('#countdown3').fadeIn(1000).delay(500).fadeOut(500, function(){
+    $('#countdown2').fadeIn(1000).delay(500).fadeOut(500, function(){
+      $('#countdown1').fadeIn(1000).delay(500).fadeOut(500, function(){
+        $('#countdown-start').fadeIn(1000).delay(500).fadeOut(100, function(){
+          callback();
+        });//countdown-start ending
+      });//countdown1 ending
+    });//countdown2 ending
+  });//countdown3 ending
+}//countDown function ending
+
+
+function motionLeft(){
+  $('#left-motion').fadeIn( 500 ).delay( 500 ).fadeOut( 500 );
+}
+function motionRight(){
+  $('#right-motion').fadeIn( 500 ).delay( 500 ).fadeOut( 500 );
+}
+
+
 
 function leftPlayerTurn(output){
   
@@ -36,11 +64,12 @@ function rightPlayerTurn(output){
 
 }
 
+
 function gamePlay(ping, pong, length) {
   var output;
   //basic game loop
   for (i=1; i<=length; i++) {
-
+    //if-else to establish output value;
     if (i%ping===0 && i%pong===0) {
         output = 'ping-pong';
       } else if (i%pong===0) {
@@ -71,11 +100,10 @@ $(document).ready(function(){
     $('#game-area').delay( 600 ).fadeIn( 400 );
 
     //countdown
-    $('#countdown3').fadeIn( 1000 ).delay( 500 ).fadeOut( 500 );
-    $('#countdown2').delay( 2000 ).fadeIn( 1000 ).delay( 500 ).fadeOut( 500 );
-    $('#countdown1').delay( 4000 ).fadeIn( 1000 ).delay( 500 ).fadeOut( 500 );
-    $('#countdown-start').delay(6000).fadeIn( 1000 ).delay( 500 ).fadeOut( 100 );
+    countDown(motionLeft);
+   
 
+    
 
   }); //ending of click function
 

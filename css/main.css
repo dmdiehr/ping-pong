@@ -85,16 +85,9 @@ label {
   text-align: center;
   margin: auto;
 }
-#countdown3 {
-  display: none;
-}
-#countdown2 {
-  display: none;
-}
-#countdown1 {
-  display: none;
-}
 #countdown-start {
-  display: none;
   font-size: 8em;
+}
+.center {
+  display: none;
 }
