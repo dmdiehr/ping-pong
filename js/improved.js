@@ -8,19 +8,31 @@ var leftPaddle;
 var rightPaddle;
 
 function leftPlayerTurn(output){
+  
   //if output = ping - show ping img, add 1 point
+
   //if output = pong - show pong img, add 2 point
+  
   //if output = ping-pong - show ping-pong img, add 5 point
+  
   //if output = number - show number
+  
   // show left-ball img
+  // $(this).show("slide", { direction: "left" }, 1000);
 
 }
 function rightPlayerTurn(output){
+  
   //if output = ping - show ping img, add 1 point
+  
   //if output = pong - show pong img, add 2 point
+  
   //if output = ping-pong - show ping-pong img, add 5 point
+  
   //if output = number - show number
+  
   // show right-ball img
+  // $(this).show("slide", { direction: "left" }, 1000);
 
 }
 
@@ -28,17 +40,20 @@ function gamePlay(ping, pong, length) {
   var output;
   //basic game loop
   for (i=1; i<=length; i++) {
+
     if (i%ping===0 && i%pong===0) {
-      output = 'ping-pong';
-    } else if (i%pong===0) {
-      output = 'pong';
-    } else if (i%ping===0) {
-      output = 'ping';
-    } else {
-      output = i;
-    }
-    
-  }
+        output = 'ping-pong';
+      } else if (i%pong===0) {
+        output = 'pong';
+      } else if (i%ping===0) {
+        output = 'ping';
+      } else {
+        output = i;
+    }//end of if-else to set output
+
+    if (i%2!==0) {leftPlayerTurn(output);} //if odd then it's the left players turn
+    if (i%2===0) {rightPlayerTurn(output);} // if even then it's the right players turn
+  }//end of for-loop
 }
 
 

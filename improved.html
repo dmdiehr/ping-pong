@@ -7,7 +7,7 @@
 <!-- CSS and Fonts-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
 <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -20,23 +20,45 @@
     </header>
 <!-- ********************************Starting Section***************************************** -->
     <div id="start">
-      <h2>Choose Your Numbers</h2>
+      <div id="rules">
+        <h3>Rules</h3>
+        <p>
+          Pick how often to Ping. Pick how often to Pong. Pick how long to play.
+        </p>
+        <p>
+          Pings are worth 1 point. Pongs are worth 2 points. Ping-Pongs are worth 5 points.
+        </p>
+      </div>
+      <h3>Make Your Game</h3>
       <form>
         <label>Ping <input class="input" id="ping-input" type="text" name="ping" value="3"/></label>
         <label>Pong <input class="input" id="pong-input"type="text" name="pong" value="5"/></label>
-        <br>
         <label>Length <input class="input" id="game-length" type="text" name="length" value="99"/></label>
       </form>
-      <button id="start-button">Start</button>
+      <button id="start-button">Let's Play</button>
+
     </div>
     <div id="game-area">
-      <div id="left-score-div"><span id="left-score">00</span></div>
+      <div id="left-score-div"><span id="left-score">0</span></div>
       <div id="left-player-div"><img src="images/left-player.jpg"></div>
-      <div id="left-paddle-div"></div>
-      <div id="center-div"></div>
-      <div id="right-paddle-div"></div>
+      <div id="left-paddle-div">
+        <div id="left-number"></div>
+        <div id="left-ping"></div>
+        <div id="left-pong"></div>
+        <div id="left-ping-pong"></div>
+      </div>
+      <div id="center-div">
+        <div id="left-motion"></div>
+        <div id="right-motion"></div>
+      </div>
+      <div id="right-paddle-div">
+        <div id="right-number"></div>
+        <div id="right-ping"></div>
+        <div id="right-pong"></div>
+        <div id="right-ping-pong"></div>
+      </div>
       <div id="right-player-div"><img src="images/right-player.jpg"></div>
-      <div id="right-score-div"><span id="right-score">00</span></div>
+      <div id="right-score-div"><span id="right-score">0</span></div>
     </div>
   
   </body>

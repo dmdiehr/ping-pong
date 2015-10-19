@@ -1,6 +1,6 @@
 body{
   box-sizing: border-box;
-  font-family: Montserrat;
+  font-family: Bitter;
 }
 #index-h1 {
   display: inline;
@@ -11,7 +11,15 @@ header img {
   margin: auto;
   max-width: 100%;
 }
-
+/**********************Start Section********************************/
+#start {
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+h3 {
+  padding: 1em;
+}
 form {
   text-align: center;
 }
@@ -19,7 +27,7 @@ input {
     display: inline-block;
     width: 6em;
     position: relative;
-    top: -3em;
+    top: -3.5em;
     text-align: center;
 }
 label {
@@ -27,12 +35,15 @@ label {
     width: 6em;
     margin-right: .5em;
     padding-top: 1.5em;
+    
 }
-#start {
+#rules p {
   text-align: center;
-  margin: auto;
-  padding: 20px;
+  font-size: 1.5em;
 }
+
+/**********************Game Section********************************/
+
 #game-area {
   display: none;
   width: 1600px;
@@ -44,6 +55,9 @@ label {
   height: 200px;
   float: left;
 }
+#right-score-div {
+  text-align: right;
+}
 #left-player-div, #right-player-div {
   width: 400px;
   height: 200px;
@@ -53,8 +67,16 @@ label {
   width: 200px;
   height: 200px;
   float: left;
+  text-align: center;
 }
 #left-score, #right-score {
   font-size: 2em;
   margin: auto;
+}
+
+#left-number, #right-number {
+  display: inline-block;
+  max-width: 200px;
+  max-height: 200px;
+  font-size: 10em;
 }
