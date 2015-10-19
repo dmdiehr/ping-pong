@@ -35,7 +35,7 @@ label {
     width: 6em;
     margin-right: .5em;
     padding-top: 1.5em;
-    
+
 }
 #rules p {
   text-align: center;
@@ -79,4 +79,22 @@ label {
   max-width: 200px;
   max-height: 200px;
   font-size: 10em;
+}
+.countdown {
+  font-size: 10em;
+  text-align: center;
+  margin: auto;
+}
+#countdown3 {
+  display: none;
+}
+#countdown2 {
+  display: none;
+}
+#countdown1 {
+  display: none;
+}
+#countdown-start {
+  display: none;
+  font-size: 8em;
 }

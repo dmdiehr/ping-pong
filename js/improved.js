@@ -2,8 +2,8 @@
 var pingInput;
 var pongInput;
 var gameLength;
-var leftScore;
-var rightScore;
+var leftScore = 0;
+var rightScore = 0;
 var leftPaddle;
 var rightPaddle;
 
@@ -69,6 +69,12 @@ $(document).ready(function(){
     //switch divs
     $('#start').fadeOut( 400 );
     $('#game-area').delay( 600 ).fadeIn( 400 );
+
+    //countdown
+    $('#countdown3').fadeIn( 1000 ).delay( 500 ).fadeOut( 500 );
+    $('#countdown2').delay( 2000 ).fadeIn( 1000 ).delay( 500 ).fadeOut( 500 );
+    $('#countdown1').delay( 4000 ).fadeIn( 1000 ).delay( 500 ).fadeOut( 500 );
+    $('#countdown-start').delay(6000).fadeIn( 1000 ).delay( 500 ).fadeOut( 100 );
 
 
   }); //ending of click function
