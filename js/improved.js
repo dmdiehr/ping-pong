@@ -23,6 +23,16 @@ function countDown(callback){
   });//countdown3 ending
 }//countDown function ending
 
+function winner(left, right){
+  if (left>right){
+    alert('LEFT PLAYER WINS!');
+  } else if (right>left){
+    alert('RIGHT PLAYER WINS!');
+  } else if (left===right){
+    alert ('TIE GAME!');
+  }
+}
+
 function leftPlayerTurn(callback){
 
   ping = false;
@@ -62,6 +72,8 @@ function leftPlayerTurn(callback){
       } else {
         callback();
       }
+    } else {
+      winner(leftScore, rightScore);
     }
   });
 }
@@ -106,7 +118,9 @@ function rightPlayerTurn(callback){
       } else {
         callback();
       }
-    }
+    } else {
+      winner(leftScore, rightScore);
+      }
   });
 }
 
