@@ -75,7 +75,6 @@ label {
 }
 
 #left-number, #right-number {
-  display: inline-block;
   max-width: 200px;
   max-height: 200px;
   font-size: 10em;
@@ -88,6 +87,6 @@ label {
 #countdown-start {
   font-size: 8em;
 }
-.center {
+.center, .left, .right {
   display: none;
 }
