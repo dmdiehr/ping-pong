@@ -24,12 +24,30 @@ function countDown(callback){
 }//countDown function ending
 
 function winner(left, right){
+  $('#game-area').hide();
+  $('header').hide();
   if (left>right){
-    alert('LEFT PLAYER WINS!');
+    $('#winner').fadeIn();
+    $('#left-winner').fadeIn();
+
+    for (i=0; i<=3; i++) {
+        $('#winner-inverse').fadeIn(1000).delay(500).fadeOut(500).fadeIn();
+      }
+
   } else if (right>left){
-    alert('RIGHT PLAYER WINS!');
-  } else if (left===right){
-    alert ('TIE GAME!');
+    $('#winner').fadeIn();
+    $('#right-winner').fadeIn();
+
+    for (i=0; i<=3; i++) {
+      $('#winner-inverse').fadeIn(1000).delay(500).fadeOut(500).fadeIn();
+    }
+
+    } else if (left===right){
+    $('#winner').fadeIn();
+    $('#winner-tie').fadeIn();
+    $('#left-winner').fadeIn().css('float', 'left');
+    $('#right-winner').fadeIn().css('float', 'right');
+
   }
 }
 
@@ -135,6 +153,7 @@ $(document).ready(function(){
     $('#game-area').delay(600).fadeIn(400);
 
     countDown(leftPlayerTurn);
+
 
   }); //ending of click function
 }); //ending of document.ready;
