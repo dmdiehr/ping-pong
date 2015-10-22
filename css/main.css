@@ -90,3 +90,33 @@ label {
 .center, .left, .right {
   display: none;
 }
+/**********************Winner Section********************************/
+
+#left-winner, #right-winner {
+  display:none;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  top: 250px;
+}
+
+#winner {
+  width: 50%;
+  height: 800px;
+  text-align: center;
+  margin: auto;
+  }
+
+#winner p {
+    font-size: 5em;
+    position: relative;
+    top: 200px;
+  }
+#winner-inverse {
+  color: white;
+  background-color: black;
+}
+#winner-standard, #winner-inverse, #winner-tie {
+  display: none;
+}
